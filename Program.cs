@@ -86,7 +86,8 @@ namespace DIO.Bank
             
             int entaradaTipoConta = int.Parse(Console.ReadLine());
             while ((entaradaTipoConta != 1) || (entaradaTipoConta != 1))
-            {
+            {   
+                Console.WriteLine("Valor invalido");
                 InserirConta();
             }
             Console.WriteLine("Digite o nome do cliente");
