@@ -83,8 +83,12 @@ namespace DIO.Bank
             Console.WriteLine("Inserir nova conta");
 
             Console.WriteLine("Digite 1 - para conta fisica ou 2 - para juridica");
+            
             int entaradaTipoConta = int.Parse(Console.ReadLine());
-
+            while ((entaradaTipoConta != 1) || (entaradaTipoConta != 1))
+            {
+                InserirConta();
+            }
             Console.WriteLine("Digite o nome do cliente");
             string entradaNome = Console.ReadLine();
             
@@ -104,13 +108,13 @@ namespace DIO.Bank
 
         private static void ListarContas(){
             if (listContas.Count == 0){
-                Console.Write("Nunhuma cont aencontrada");
+                Console.Write("Nunhuma conta encontrada");
                 return;
             }
 
             for (int i = 0; i < listContas.Count; i++){
                 Conta conta = listContas[i];
-                Console.WriteLine("#{0} - ", i);
+                Console.Write("#{0} - ", i);
                 Console.WriteLine(conta);
             }
         }
